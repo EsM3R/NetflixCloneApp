@@ -9,21 +9,51 @@
 /* Begin PBXBuildFile section */
 		280F25B52B585A87007018DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F25B42B585A87007018DD /* AppDelegate.swift */; };
 		280F25B72B585A87007018DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F25B62B585A87007018DD /* SceneDelegate.swift */; };
-		280F25B92B585A87007018DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F25B82B585A87007018DD /* ViewController.swift */; };
-		280F25BC2B585A87007018DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280F25BA2B585A87007018DD /* Main.storyboard */; };
+		280F25B92B585A87007018DD /* NFHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F25B82B585A87007018DD /* NFHomeViewController.swift */; };
 		280F25BE2B585A89007018DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280F25BD2B585A89007018DD /* Assets.xcassets */; };
 		280F25C12B585A89007018DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280F25BF2B585A89007018DD /* LaunchScreen.storyboard */; };
+		280F25CF2B585D03007018DD /* NFTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F25CE2B585D03007018DD /* NFTabbarViewController.swift */; };
+		280F25D12B585D78007018DD /* NFNewAndHotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F25D02B585D78007018DD /* NFNewAndHotViewController.swift */; };
+		280F25D32B585D9A007018DD /* NFMyNetflixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F25D22B585D9A007018DD /* NFMyNetflixViewController.swift */; };
+		280F25D62B585F5F007018DD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F25D52B585F5F007018DD /* Extensions.swift */; };
+		280F25DA2B58631E007018DD /* NFHomeViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F25D92B58631E007018DD /* NFHomeViewHeaderView.swift */; };
+		280F25DC2B587551007018DD /* NFHomeViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F25DB2B587551007018DD /* NFHomeViewViewModel.swift */; };
+		280F25DE2B587885007018DD /* NFNewAndHotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F25DD2B587884007018DD /* NFNewAndHotTableViewCell.swift */; };
+		280F25E02B58804A007018DD /* NFNewAndHotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F25DF2B58804A007018DD /* NFNewAndHotViewModel.swift */; };
+		287A700D2B59C66000FC7247 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287A700C2B59C65F00FC7247 /* CustomButton.swift */; };
+		287A70102B59C75C00FC7247 /* CustomButtonBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287A700F2B59C75C00FC7247 /* CustomButtonBuilder.swift */; };
+		287A70122B59C84E00FC7247 /* NFButtonBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287A70112B59C84E00FC7247 /* NFButtonBuilder.swift */; };
+		287A70142B59C9D700FC7247 /* CustomButtonDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287A70132B59C9D700FC7247 /* CustomButtonDirector.swift */; };
+		287A70182B59DA4500FC7247 /* NFService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287A70172B59DA4500FC7247 /* NFService.swift */; };
+		287A701C2B59DB8400FC7247 /* NFMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287A701B2B59DB8400FC7247 /* NFMovieModel.swift */; };
+		287A701E2B59DBF900FC7247 /* NFResponseNewAndHotMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287A701D2B59DBF900FC7247 /* NFResponseNewAndHotMovie.swift */; };
+		287A70202B59DC9000FC7247 /* NFRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287A701F2B59DC9000FC7247 /* NFRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		280F25B12B585A87007018DD /* NetflixCloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixCloneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		280F25B42B585A87007018DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		280F25B62B585A87007018DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		280F25B82B585A87007018DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		280F25BB2B585A87007018DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		280F25B82B585A87007018DD /* NFHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFHomeViewController.swift; sourceTree = "<group>"; };
 		280F25BD2B585A89007018DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		280F25C02B585A89007018DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		280F25C22B585A89007018DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		280F25CE2B585D03007018DD /* NFTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTabbarViewController.swift; sourceTree = "<group>"; };
+		280F25D02B585D78007018DD /* NFNewAndHotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFNewAndHotViewController.swift; sourceTree = "<group>"; };
+		280F25D22B585D9A007018DD /* NFMyNetflixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFMyNetflixViewController.swift; sourceTree = "<group>"; };
+		280F25D52B585F5F007018DD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		280F25D92B58631E007018DD /* NFHomeViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFHomeViewHeaderView.swift; sourceTree = "<group>"; };
+		280F25DB2B587551007018DD /* NFHomeViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFHomeViewViewModel.swift; sourceTree = "<group>"; };
+		280F25DD2B587884007018DD /* NFNewAndHotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFNewAndHotTableViewCell.swift; sourceTree = "<group>"; };
+		280F25DF2B58804A007018DD /* NFNewAndHotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFNewAndHotViewModel.swift; sourceTree = "<group>"; };
+		287A700C2B59C65F00FC7247 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		287A700F2B59C75C00FC7247 /* CustomButtonBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonBuilder.swift; sourceTree = "<group>"; };
+		287A70112B59C84E00FC7247 /* NFButtonBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFButtonBuilder.swift; sourceTree = "<group>"; };
+		287A70132B59C9D700FC7247 /* CustomButtonDirector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonDirector.swift; sourceTree = "<group>"; };
+		287A70172B59DA4500FC7247 /* NFService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFService.swift; sourceTree = "<group>"; };
+		287A701B2B59DB8400FC7247 /* NFMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFMovieModel.swift; sourceTree = "<group>"; };
+		287A701D2B59DBF900FC7247 /* NFResponseNewAndHotMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFResponseNewAndHotMovie.swift; sourceTree = "<group>"; };
+		287A701F2B59DC9000FC7247 /* NFRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +86,118 @@
 		280F25B32B585A87007018DD /* NetflixCloneApp */ = {
 			isa = PBXGroup;
 			children = (
-				280F25B42B585A87007018DD /* AppDelegate.swift */,
-				280F25B62B585A87007018DD /* SceneDelegate.swift */,
-				280F25B82B585A87007018DD /* ViewController.swift */,
-				280F25BA2B585A87007018DD /* Main.storyboard */,
-				280F25BD2B585A89007018DD /* Assets.xcassets */,
-				280F25BF2B585A89007018DD /* LaunchScreen.storyboard */,
+				280F25D42B585F4E007018DD /* Utils */,
+				280F25C82B585AA2007018DD /* Resources */,
+				280F25CD2B585B67007018DD /* APIClient */,
+				280F25C92B585AC1007018DD /* Model */,
+				280F25CA2B585AC6007018DD /* ViewModel */,
+				280F25CB2B585ACD007018DD /* View */,
+				280F25CC2B585AD1007018DD /* Controllers */,
 				280F25C22B585A89007018DD /* Info.plist */,
 			);
 			path = NetflixCloneApp;
+			sourceTree = "<group>";
+		};
+		280F25C82B585AA2007018DD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				280F25B42B585A87007018DD /* AppDelegate.swift */,
+				280F25B62B585A87007018DD /* SceneDelegate.swift */,
+				280F25BD2B585A89007018DD /* Assets.xcassets */,
+				280F25BF2B585A89007018DD /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		280F25C92B585AC1007018DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				287A701A2B59DB5100FC7247 /* Response */,
+				287A70192B59DB4500FC7247 /* Data */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		280F25CA2B585AC6007018DD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				280F25DB2B587551007018DD /* NFHomeViewViewModel.swift */,
+				280F25DF2B58804A007018DD /* NFNewAndHotViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		280F25CB2B585ACD007018DD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				280F25D92B58631E007018DD /* NFHomeViewHeaderView.swift */,
+				280F25DD2B587884007018DD /* NFNewAndHotTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		280F25CC2B585AD1007018DD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				280F25CE2B585D03007018DD /* NFTabbarViewController.swift */,
+				280F25D02B585D78007018DD /* NFNewAndHotViewController.swift */,
+				280F25B82B585A87007018DD /* NFHomeViewController.swift */,
+				280F25D22B585D9A007018DD /* NFMyNetflixViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		280F25CD2B585B67007018DD /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				287A70172B59DA4500FC7247 /* NFService.swift */,
+				287A701F2B59DC9000FC7247 /* NFRequest.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		280F25D42B585F4E007018DD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				287A700E2B59C73100FC7247 /* Extensions */,
+				287A700B2B59C62D00FC7247 /* CustomButton */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		287A700B2B59C62D00FC7247 /* CustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				287A700C2B59C65F00FC7247 /* CustomButton.swift */,
+				287A700F2B59C75C00FC7247 /* CustomButtonBuilder.swift */,
+				287A70112B59C84E00FC7247 /* NFButtonBuilder.swift */,
+				287A70132B59C9D700FC7247 /* CustomButtonDirector.swift */,
+			);
+			path = CustomButton;
+			sourceTree = "<group>";
+		};
+		287A700E2B59C73100FC7247 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				280F25D52B585F5F007018DD /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		287A70192B59DB4500FC7247 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				287A701B2B59DB8400FC7247 /* NFMovieModel.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		287A701A2B59DB5100FC7247 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				287A701D2B59DBF900FC7247 /* NFResponseNewAndHotMovie.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +260,6 @@
 			files = (
 				280F25C12B585A89007018DD /* LaunchScreen.storyboard in Resources */,
 				280F25BE2B585A89007018DD /* Assets.xcassets in Resources */,
-				280F25BC2B585A87007018DD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +270,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				280F25B92B585A87007018DD /* ViewController.swift in Sources */,
+				287A700D2B59C66000FC7247 /* CustomButton.swift in Sources */,
+				280F25B92B585A87007018DD /* NFHomeViewController.swift in Sources */,
+				280F25E02B58804A007018DD /* NFNewAndHotViewModel.swift in Sources */,
 				280F25B52B585A87007018DD /* AppDelegate.swift in Sources */,
+				287A70202B59DC9000FC7247 /* NFRequest.swift in Sources */,
+				280F25DA2B58631E007018DD /* NFHomeViewHeaderView.swift in Sources */,
+				287A70102B59C75C00FC7247 /* CustomButtonBuilder.swift in Sources */,
+				280F25CF2B585D03007018DD /* NFTabbarViewController.swift in Sources */,
+				280F25DE2B587885007018DD /* NFNewAndHotTableViewCell.swift in Sources */,
+				287A70142B59C9D700FC7247 /* CustomButtonDirector.swift in Sources */,
+				280F25DC2B587551007018DD /* NFHomeViewViewModel.swift in Sources */,
+				287A70182B59DA4500FC7247 /* NFService.swift in Sources */,
+				280F25D12B585D78007018DD /* NFNewAndHotViewController.swift in Sources */,
+				287A701E2B59DBF900FC7247 /* NFResponseNewAndHotMovie.swift in Sources */,
 				280F25B72B585A87007018DD /* SceneDelegate.swift in Sources */,
+				280F25D32B585D9A007018DD /* NFMyNetflixViewController.swift in Sources */,
+				280F25D62B585F5F007018DD /* Extensions.swift in Sources */,
+				287A70122B59C84E00FC7247 /* NFButtonBuilder.swift in Sources */,
+				287A701C2B59DB8400FC7247 /* NFMovieModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		280F25BA2B585A87007018DD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				280F25BB2B585A87007018DD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		280F25BF2B585A89007018DD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +437,6 @@
 				INFOPLIST_FILE = NetflixCloneApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +464,6 @@
 				INFOPLIST_FILE = NetflixCloneApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
