@@ -12,16 +12,22 @@ class NFNewAndHotViewController: UIViewController {
     
     
     private let tableView : UITableView = UITableView()
+    
     private let viewModel : NFNewAndHotViewModel = NFNewAndHotViewModel()
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         configureUI()
         initDelegate()
+        initService()
+        
     }
     
     private func configureUI(){
         view.addSubviews(tableView)
+        setUpNavigationBar()
         setUpAttributeTableView()
         setUpTableView()
     }
@@ -30,7 +36,17 @@ class NFNewAndHotViewController: UIViewController {
         tableView.dataSource = viewModel
         tableView.delegate = viewModel
     }
-    
+    private func initService(){
+        Service.shared.fetchNewsAndHotMovies { response in
+            DispatchQueue.main.async {
+                self.viewModel.update(items: response.results)
+                self.tableView.reloadData()
+            }
+        } onFailure: { error in
+            print(error.localizedDescription)
+        }
+
+    }
 
 }
 
@@ -62,4 +78,21 @@ extension NFNewAndHotViewController {
     
         ])
     }
+}
+
+extension NFNewAndHotViewController{
+    private func setUpNavigationBar(){
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "NEWS & HOTS", style: .done, target: self, action: nil)
+            
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"),
+                                                                style: .done,
+                                                                target: self,
+                                                                action: nil)
+
+
+
+        navigationController?.navigationBar.tintColor = UIColor.white
+    }
+    
 }

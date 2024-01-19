@@ -7,19 +7,19 @@
 
 import UIKit
 
+protocol NFNewAndHotTableViewCellProtocol{
+    func configure(movie : NFMovieModel )
+}
+
 final class  NFNewAndHotTableViewCell : UITableViewCell{
     
     public static let identifer = "NFNewAndHotTableViewCell"
-    
-    private let vStackView : UIStackView = UIStackView()
-    
+        
     private let dateLabel : UILabel = UILabel()
     
     private let dateNameLabel : UILabel = UILabel()
 
     private let posterImageView : UIImageView = UIImageView()
-    
-    private let hStackView : UIStackView = UIStackView()
     
     private let nameLabel : UILabel = UILabel()
     
@@ -41,74 +41,83 @@ final class  NFNewAndHotTableViewCell : UITableViewCell{
     
     
     private func configureUI(){
-        addSubviews(vStackView,posterImageView,hStackView,descriptionLabel)
+        addSubviews(dateLabel,dateNameLabel,posterImageView,nameLabel,notifactionButton,infoButton,descriptionLabel)
         
         
-        setUpAttributeVStackView()
+       
         setUpAttributeDateLabel()
         setUpAttributeDateNameLabel()
         setUpAttributePosterImageView()
-        setUpAttributeHStackView()
         setUpAttributeNameLabel()
-        setUpAttributeNoticationButton()
-        setUpAttributeInfoButton()
         setUpAttributeDescriptionLabel()
+
         
-        setUpVStackView()
+        setUpDateLabel()
+        setUpDateNameLabel()
         setUpPosterImageView()
-        setUpHStackView()
+        setUpNameLabel()
         setUpDescriptionLabel()
+
+     
         
     }
     
 }
+// MARK: - Protocol for configure UI
+
+extension NFNewAndHotTableViewCell : NFNewAndHotTableViewCellProtocol{
+    func configure(movie: NFMovieModel) {
+        self.nameLabel.text  = movie.original_title
+        self.descriptionLabel.text  =  movie.overview
+        self.dateLabel.text = "26"
+        self.dateNameLabel.text = "FEB"
+        
+        let imageUrl = movie.poster_path
+        
+        NFImageService.shared.fetchImage(imageUrl: imageUrl) { result  in
+        switch result{
+            case .success(let data):
+                DispatchQueue.main.async{
+                    self.posterImageView.image = UIImage(data: data)
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    
+}
+
+
+
 
 
 // MARK: - Set up  Attribute
 
 extension NFNewAndHotTableViewCell {
     
-    private func setUpAttributeVStackView(){
-        vStackView.translatesAutoresizingMaskIntoConstraints = false
-        vStackView.spacing = 5
-        vStackView.axis = .vertical
-       
-        vStackView.addArrangedSubview(dateNameLabel)
-        vStackView.addArrangedSubview(dateLabel)
-    }
+   
     private func setUpAttributeDateLabel(){
-        dateLabel.text = "09"
-        dateLabel.font = UIFont.systemFont(ofSize: 20, weight: .heavy)
+        dateLabel.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         dateLabel.translatesAutoresizingMaskIntoConstraints = false
     }
     private func setUpAttributeDateNameLabel(){
-        dateNameLabel.text = "Feb"
-        dateNameLabel.font = UIFont.systemFont(ofSize: 12, weight: .black)
+        dateNameLabel.font = UIFont.systemFont(ofSize: 20, weight: .black)
         dateNameLabel.translatesAutoresizingMaskIntoConstraints = false
     }
     
     private func setUpAttributePosterImageView(){
         posterImageView.translatesAutoresizingMaskIntoConstraints = false
-        posterImageView.image = UIImage(named: "demo")
         posterImageView.backgroundColor = .red
         posterImageView.layer.cornerRadius = 15
         posterImageView.clipsToBounds = true
         posterImageView.contentMode = .scaleAspectFill
     }
     
-    private func setUpAttributeHStackView(){
-        hStackView.translatesAutoresizingMaskIntoConstraints = false
-        hStackView.spacing = 5
-        hStackView.axis = .horizontal
-    
-        hStackView.addArrangedSubview(nameLabel)
-        hStackView.addArrangedSubview(notifactionButton)
-        hStackView.addArrangedSubview(infoButton)
-    }
     
     private func setUpAttributeNameLabel(){
-        nameLabel.text = "Kubra"
-        nameLabel.font = UIFont.systemFont(ofSize: 35, weight: .heavy)
+        nameLabel.font = UIFont.systemFont(ofSize: 24, weight: .heavy)
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
     }
     private func setUpAttributeNoticationButton(){
@@ -119,16 +128,18 @@ extension NFNewAndHotTableViewCell {
     }
     
     private func setUpAttributeInfoButton(){
-        let image = UIImage(systemName: "info.circle", withConfiguration: UIImage.SymbolConfiguration(font: UIFont.systemFont(ofSize: 24, weight: .semibold)))
+        let image = UIImage(systemName: "info.circle", 
+                            withConfiguration: UIImage.SymbolConfiguration(font: UIFont.systemFont(ofSize: 24, weight: .semibold)))
         infoButton.translatesAutoresizingMaskIntoConstraints = false
         infoButton.setImage(image, for: .normal)
         infoButton.tintColor = .white
     }
     
     private func setUpAttributeDescriptionLabel(){
-        descriptionLabel.font = UIFont.systemFont(ofSize: 12)
+        descriptionLabel.font = UIFont.systemFont(ofSize: 11)
         descriptionLabel.textAlignment = .left
         descriptionLabel.numberOfLines = 3
+        descriptionLabel.lineBreakMode = .byWordWrapping
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
     }
 
@@ -142,40 +153,47 @@ extension NFNewAndHotTableViewCell {
 extension NFNewAndHotTableViewCell{
     
     
-    private func setUpVStackView(){
+    private func setUpDateLabel(){
         NSLayoutConstraint.activate([
-            vStackView.topAnchor.constraint(equalTo: topAnchor),
-            vStackView.leftAnchor.constraint(equalTo: leftAnchor , constant: 10),
+            dateLabel.topAnchor.constraint(equalTo: topAnchor),
+            dateLabel.leftAnchor.constraint(equalTo: leftAnchor , constant: 10),
+        ])
+    }
+    private func setUpDateNameLabel(){
+        NSLayoutConstraint.activate([
+            dateNameLabel.topAnchor.constraint(equalTo: dateLabel.bottomAnchor , constant: 2),
+            dateNameLabel.leftAnchor.constraint(equalTo: leftAnchor , constant: 10),
         ])
     }
     
     private func setUpPosterImageView(){
         
         let height = UIScreen.main.bounds.height
-        
+        let width = UIScreen.main.bounds.width
         NSLayoutConstraint.activate([
-            posterImageView.heightAnchor.constraint(equalToConstant: height * 0.3),
+            posterImageView.heightAnchor.constraint(equalToConstant: height * 0.27),
+            posterImageView.widthAnchor.constraint(equalToConstant: width - 75),
+            posterImageView.topAnchor.constraint(equalTo: topAnchor),
             posterImageView.leftAnchor.constraint(equalTo: dateLabel.rightAnchor ,constant: 10),
             posterImageView.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
         ])
     }
-    
-    private func setUpHStackView(){
+    private func setUpNameLabel(){
         NSLayoutConstraint.activate([
-            
-            hStackView.topAnchor.constraint(equalTo: posterImageView.bottomAnchor, constant: 10),
-            hStackView.leftAnchor.constraint(equalTo: posterImageView.leftAnchor),
-            hStackView.rightAnchor.constraint(equalTo: posterImageView.rightAnchor),
-            
+            nameLabel.leftAnchor.constraint(equalTo: posterImageView.leftAnchor),
+            nameLabel.topAnchor.constraint(equalTo: posterImageView.bottomAnchor , constant: 5)
         ])
     }
+    
     private func setUpDescriptionLabel(){
         NSLayoutConstraint.activate([
-    
             descriptionLabel.leftAnchor.constraint(equalTo: posterImageView.leftAnchor),
             descriptionLabel.rightAnchor.constraint(equalTo: posterImageView.rightAnchor),
-            descriptionLabel.topAnchor.constraint(equalTo: infoButton.bottomAnchor, constant: 8)
-            
+            descriptionLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 10),
         ])
     }
+    
+
+    
+   
 }

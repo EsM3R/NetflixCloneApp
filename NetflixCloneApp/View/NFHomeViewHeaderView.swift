@@ -16,12 +16,14 @@ final class NFHomeViewHeaderView : UIView{
     private let headerImageView : UIImageView = UIImageView()
     
 
-//    private let myListButton : UIButton = CustomButton(title: "My List",
-//                                                       iconName: "plus",
-//                                                       tintColor: .white,
-//                                                       backgroundColor: .systemGray)
-    private var playButton : UIButton = UIButton()
-    private let myListButton : UIButton = UIButton()
+    private var playButton : UIButton = CustomButton(title: "Play", 
+                                                     titleColor: .darkGray,
+                                                     backColor: .white,
+                                                     iconName: "play")
+    private let myListButton : UIButton = CustomButton(title: "MyList",
+                                                       titleColor: .white,
+                                                       backColor: .gray,
+                                                       iconName: "plus")
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,7 +41,7 @@ final class NFHomeViewHeaderView : UIView{
         addSubviews(headerImageView,playButton ,myListButton)
         
         setUpAttributeheaderImageView()
-        playButton.translatesAutoresizingMaskIntoConstraints = false
+       
         
         setUpHeaderImageView()
         setUpImageLayer()
@@ -115,8 +117,6 @@ extension NFHomeViewHeaderView{
     }
     
     private func setUpMyListButton(){
-        
-       
         
         NSLayoutConstraint.activate([
             

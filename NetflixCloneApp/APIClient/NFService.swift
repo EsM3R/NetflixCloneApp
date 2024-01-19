@@ -29,10 +29,11 @@ final class Service : ServiceProtocol{
             
             do{
                 let response = try JSONDecoder().decode(NFResponseNewAndHotMovie.self, from: data)
-                print(response)
+                onSuccess(response)
             }
             catch{
-                print(error.localizedDescription)
+                onFailure(error)
+                 
             }
         }
         task.resume()
@@ -46,7 +47,4 @@ final class Service : ServiceProtocol{
     
     private init(){}
     
-
-    
-
 }
