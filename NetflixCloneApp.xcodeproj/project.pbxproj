@@ -20,6 +20,14 @@
 		280F25DC2B587551007018DD /* NFHomeViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F25DB2B587551007018DD /* NFHomeViewViewModel.swift */; };
 		280F25DE2B587885007018DD /* NFNewAndHotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F25DD2B587884007018DD /* NFNewAndHotTableViewCell.swift */; };
 		280F25E02B58804A007018DD /* NFNewAndHotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F25DF2B58804A007018DD /* NFNewAndHotViewModel.swift */; };
+		284843AB2B5BB49700AF27E0 /* NFHomeViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284843AA2B5BB49700AF27E0 /* NFHomeViewTableViewCell.swift */; };
+		284843AD2B5BBDC100AF27E0 /* NFHomeViewCollectionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284843AC2B5BBDC100AF27E0 /* NFHomeViewCollectionCellViewModel.swift */; };
+		284843AF2B5BCBCE00AF27E0 /* NFHomeViewCollectionViewCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284843AE2B5BCBCE00AF27E0 /* NFHomeViewCollectionViewCellView.swift */; };
+		284843B12B5BD57700AF27E0 /* NFResponseTrendingMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284843B02B5BD57700AF27E0 /* NFResponseTrendingMovie.swift */; };
+		284843B62B5C0C3D00AF27E0 /* NFMovieDetailScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284843B52B5C0C3D00AF27E0 /* NFMovieDetailScreenViewController.swift */; };
+		284843BA2B5C377E00AF27E0 /* NFMovieDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284843B92B5C377E00AF27E0 /* NFMovieDetailHeaderView.swift */; };
+		284843BC2B5C503300AF27E0 /* NFMovieDetailFooterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284843BB2B5C503300AF27E0 /* NFMovieDetailFooterViewCell.swift */; };
+		284843BE2B5C527300AF27E0 /* NFMovieDetailFooterViewCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284843BD2B5C527300AF27E0 /* NFMovieDetailFooterViewCollectionViewCellViewModel.swift */; };
 		287A70182B59DA4500FC7247 /* NFService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287A70172B59DA4500FC7247 /* NFService.swift */; };
 		287A701C2B59DB8400FC7247 /* NFMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287A701B2B59DB8400FC7247 /* NFMovieModel.swift */; };
 		287A701E2B59DBF900FC7247 /* NFResponseNewAndHotMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287A701D2B59DBF900FC7247 /* NFResponseNewAndHotMovie.swift */; };
@@ -44,6 +52,14 @@
 		280F25DB2B587551007018DD /* NFHomeViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFHomeViewViewModel.swift; sourceTree = "<group>"; };
 		280F25DD2B587884007018DD /* NFNewAndHotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFNewAndHotTableViewCell.swift; sourceTree = "<group>"; };
 		280F25DF2B58804A007018DD /* NFNewAndHotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFNewAndHotViewModel.swift; sourceTree = "<group>"; };
+		284843AA2B5BB49700AF27E0 /* NFHomeViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFHomeViewTableViewCell.swift; sourceTree = "<group>"; };
+		284843AC2B5BBDC100AF27E0 /* NFHomeViewCollectionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFHomeViewCollectionCellViewModel.swift; sourceTree = "<group>"; };
+		284843AE2B5BCBCE00AF27E0 /* NFHomeViewCollectionViewCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFHomeViewCollectionViewCellView.swift; sourceTree = "<group>"; };
+		284843B02B5BD57700AF27E0 /* NFResponseTrendingMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFResponseTrendingMovie.swift; sourceTree = "<group>"; };
+		284843B52B5C0C3D00AF27E0 /* NFMovieDetailScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFMovieDetailScreenViewController.swift; sourceTree = "<group>"; };
+		284843B92B5C377E00AF27E0 /* NFMovieDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFMovieDetailHeaderView.swift; sourceTree = "<group>"; };
+		284843BB2B5C503300AF27E0 /* NFMovieDetailFooterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFMovieDetailFooterViewCell.swift; sourceTree = "<group>"; };
+		284843BD2B5C527300AF27E0 /* NFMovieDetailFooterViewCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFMovieDetailFooterViewCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		287A70172B59DA4500FC7247 /* NFService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFService.swift; sourceTree = "<group>"; };
 		287A701B2B59DB8400FC7247 /* NFMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFMovieModel.swift; sourceTree = "<group>"; };
 		287A701D2B59DBF900FC7247 /* NFResponseNewAndHotMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFResponseNewAndHotMovie.swift; sourceTree = "<group>"; };
@@ -109,7 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				287A701A2B59DB5100FC7247 /* Response */,
-				287A70192B59DB4500FC7247 /* Data */,
+				287A70192B59DB4500FC7247 /* Entity */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,8 +133,10 @@
 		280F25CA2B585AC6007018DD /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				280F25DB2B587551007018DD /* NFHomeViewViewModel.swift */,
 				280F25DF2B58804A007018DD /* NFNewAndHotViewModel.swift */,
+				280F25DB2B587551007018DD /* NFHomeViewViewModel.swift */,
+				284843AC2B5BBDC100AF27E0 /* NFHomeViewCollectionCellViewModel.swift */,
+				284843BD2B5C527300AF27E0 /* NFMovieDetailFooterViewCollectionViewCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -128,6 +146,10 @@
 			children = (
 				280F25D92B58631E007018DD /* NFHomeViewHeaderView.swift */,
 				280F25DD2B587884007018DD /* NFNewAndHotTableViewCell.swift */,
+				284843AA2B5BB49700AF27E0 /* NFHomeViewTableViewCell.swift */,
+				284843AE2B5BCBCE00AF27E0 /* NFHomeViewCollectionViewCellView.swift */,
+				284843B92B5C377E00AF27E0 /* NFMovieDetailHeaderView.swift */,
+				284843BB2B5C503300AF27E0 /* NFMovieDetailFooterViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -135,10 +157,8 @@
 		280F25CC2B585AD1007018DD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				280F25CE2B585D03007018DD /* NFTabbarViewController.swift */,
-				280F25D02B585D78007018DD /* NFNewAndHotViewController.swift */,
-				280F25B82B585A87007018DD /* NFHomeViewController.swift */,
-				280F25D22B585D9A007018DD /* NFMyNetflixViewController.swift */,
+				284843B42B5C0C0A00AF27E0 /* Other */,
+				284843B32B5C0C0000AF27E0 /* Core */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -162,6 +182,25 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		284843B32B5C0C0000AF27E0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				280F25CE2B585D03007018DD /* NFTabbarViewController.swift */,
+				280F25D02B585D78007018DD /* NFNewAndHotViewController.swift */,
+				280F25B82B585A87007018DD /* NFHomeViewController.swift */,
+				280F25D22B585D9A007018DD /* NFMyNetflixViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		284843B42B5C0C0A00AF27E0 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				284843B52B5C0C3D00AF27E0 /* NFMovieDetailScreenViewController.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		287A700B2B59C62D00FC7247 /* CustomButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,18 +217,19 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		287A70192B59DB4500FC7247 /* Data */ = {
+		287A70192B59DB4500FC7247 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
 				287A701B2B59DB8400FC7247 /* NFMovieModel.swift */,
 			);
-			path = Data;
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		287A701A2B59DB5100FC7247 /* Response */ = {
 			isa = PBXGroup;
 			children = (
 				287A701D2B59DBF900FC7247 /* NFResponseNewAndHotMovie.swift */,
+				284843B02B5BD57700AF27E0 /* NFResponseTrendingMovie.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -266,19 +306,27 @@
 			files = (
 				280F25B92B585A87007018DD /* NFHomeViewController.swift in Sources */,
 				280F25E02B58804A007018DD /* NFNewAndHotViewModel.swift in Sources */,
+				284843AD2B5BBDC100AF27E0 /* NFHomeViewCollectionCellViewModel.swift in Sources */,
 				280F25B52B585A87007018DD /* AppDelegate.swift in Sources */,
+				284843BC2B5C503300AF27E0 /* NFMovieDetailFooterViewCell.swift in Sources */,
+				284843AF2B5BCBCE00AF27E0 /* NFHomeViewCollectionViewCellView.swift in Sources */,
+				284843B12B5BD57700AF27E0 /* NFResponseTrendingMovie.swift in Sources */,
 				287A70202B59DC9000FC7247 /* NFRequest.swift in Sources */,
 				280F25DA2B58631E007018DD /* NFHomeViewHeaderView.swift in Sources */,
 				280F25CF2B585D03007018DD /* NFTabbarViewController.swift in Sources */,
 				280F25DE2B587885007018DD /* NFNewAndHotTableViewCell.swift in Sources */,
 				280F25DC2B587551007018DD /* NFHomeViewViewModel.swift in Sources */,
 				287A70182B59DA4500FC7247 /* NFService.swift in Sources */,
+				284843B62B5C0C3D00AF27E0 /* NFMovieDetailScreenViewController.swift in Sources */,
+				284843BE2B5C527300AF27E0 /* NFMovieDetailFooterViewCollectionViewCellViewModel.swift in Sources */,
 				280F25D12B585D78007018DD /* NFNewAndHotViewController.swift in Sources */,
 				28A037452B5AD745000B0FBE /* NFImageService.swift in Sources */,
 				287A701E2B59DBF900FC7247 /* NFResponseNewAndHotMovie.swift in Sources */,
 				280F25B72B585A87007018DD /* SceneDelegate.swift in Sources */,
 				28A0374B2B5B13C5000B0FBE /* CustomButton.swift in Sources */,
+				284843BA2B5C377E00AF27E0 /* NFMovieDetailHeaderView.swift in Sources */,
 				280F25D32B585D9A007018DD /* NFMyNetflixViewController.swift in Sources */,
+				284843AB2B5BB49700AF27E0 /* NFHomeViewTableViewCell.swift in Sources */,
 				280F25D62B585F5F007018DD /* Extensions.swift in Sources */,
 				287A701C2B59DB8400FC7247 /* NFMovieModel.swift in Sources */,
 			);

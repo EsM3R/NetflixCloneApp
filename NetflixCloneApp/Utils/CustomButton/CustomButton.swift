@@ -41,7 +41,7 @@ final class CustomButton : UIButton{
         backgroundColor = backColor
         tintColor = titleColor
         translatesAutoresizingMaskIntoConstraints = false 
-        
+        titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         setUpLayer()
         
     }

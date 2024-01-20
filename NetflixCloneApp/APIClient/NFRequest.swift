@@ -14,7 +14,13 @@ fileprivate struct Constants{
 }
 
 enum ServicePath : String{
-    case NEWSANDHOTS = "movie/upcoming"
+    
+    case NEW_AND_HOT = "movie/upcoming"
+    case TRENDING_MOVIE =  "trending/movie/day"
+    case TRENDING_TV = "trending/tv/day"
+    case POPULAR = "movie/popular"
+    case TOP_RATED = "movie/top_rated"
+    
 }
 
 

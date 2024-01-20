@@ -28,7 +28,7 @@ final class NFTabbarViewController : UITabBarController{
         nav1.tabBarItem = UITabBarItem(title: "Home",
                                        image: UIImage(systemName: "house"),
                                        tag: 1)
-        nav2.tabBarItem = UITabBarItem(title: "Coming Soon",
+        nav2.tabBarItem = UITabBarItem(title: "New & Hot",
                                        image: UIImage(systemName: "play.square.fill"),
                                        tag :2)
         nav3.tabBarItem = UITabBarItem(title: "MyNetflix",

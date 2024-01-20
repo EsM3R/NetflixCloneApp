@@ -9,41 +9,47 @@ import Foundation
 
 
 
-protocol ServiceProtocol {
-    func fetchNewsAndHotMovies(
-        onSuccess : @escaping (NFResponseNewAndHotMovie) -> Void ,
+protocol NFServiceProtocol {
+    func fetchData<T : Codable>(
+        request   :String,
+        expecting : T.Type,
+        onSuccess : @escaping (T) -> Void ,
         onFailure : @escaping (Error) -> Void)
+    
+    
 }
 
 
 
-final class Service : ServiceProtocol{
-    func fetchNewsAndHotMovies(onSuccess: @escaping (NFResponseNewAndHotMovie) -> Void, 
-                               onFailure: @escaping (Error) -> Void) {
-      
-        guard let url = URL(string: ServicePath.NEWSANDHOTS.withBaseUrl()) else {return}
-        
-        let task = URLSession.shared.dataTask(with: url) { data, _ , error in
-            
-            guard let data = data , error == nil else {return}
-            
-            do{
-                let response = try JSONDecoder().decode(NFResponseNewAndHotMovie.self, from: data)
-                onSuccess(response)
-            }
-            catch{
-                onFailure(error)
-                 
-            }
-        }
-        task.resume()
-        
+final class NFService : NFServiceProtocol{
+    func fetchData<T>(request : String,
+                      expecting: T.Type,
+                      onSuccess: @escaping (T) -> Void,
+                      onFailure: @escaping (Error) -> Void) where T : Decodable, T : Encodable {
+        guard let url = URL(string:request) else {return}
+       
+               let task = URLSession.shared.dataTask(with: url) { data, _ , error in
+       
+                   guard let data = data , error == nil else {return}
+       
+                   do{
+                       let response = try JSONDecoder().decode(T.self, from: data)
+                       onSuccess(response)
+                   }
+                   catch{
+                       onFailure(error)
+       
+                   }
+               }
+               task.resume()
     }
+    
+ 
     
 
     
     
-    public static let shared =  Service()
+    public static  let shared =  NFService()
     
     private init(){}
     

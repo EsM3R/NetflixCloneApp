@@ -11,7 +11,7 @@ protocol NFNewAndHotViewModelProtocol{
     func update(items : [NFMovieModel])
 }
 protocol NFNewAndHotViewModelDelegate : AnyObject{
-    func didSelect(item : NFMovieModel)
+    func didSelectMovie(movie : NFMovieModel)
 }
 
 
@@ -39,7 +39,7 @@ final class NFNewAndHotViewModel : NSObject{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let movie = items[indexPath.row]
-        delegate?.didSelect(item: movie)
+        delegate?.didSelectMovie(movie: movie)
     }
     
 }

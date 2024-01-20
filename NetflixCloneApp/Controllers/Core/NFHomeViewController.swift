@@ -8,6 +8,8 @@
 import UIKit
 
 class NFHomeViewController: UIViewController{
+    
+    
     private let viewModel : NFHomeViewViewModel = NFHomeViewViewModel()
     
     private let tableView : UITableView = UITableView()
@@ -17,7 +19,7 @@ class NFHomeViewController: UIViewController{
         super.viewDidLoad()
         configureUI()
         initDelegate()
-        initService()
+
     }
     
     private func configureUI(){
@@ -36,7 +38,7 @@ class NFHomeViewController: UIViewController{
     }
     
     private func initService(){
-
+    
     }
     
     
@@ -52,7 +54,8 @@ extension NFHomeViewController {
     private func setUpAttributeTableView(){
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(NFHomeViewTableViewCell.self,
+                           forCellReuseIdentifier: NFHomeViewTableViewCell.identifier)
         tableView.tableHeaderView = headerView
     }
     
@@ -82,7 +85,7 @@ extension NFHomeViewController {
         
         NSLayoutConstraint.activate([
         
-            tableView.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor ),
+            tableView.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor),
             tableView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
             tableView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)

@@ -35,9 +35,11 @@ class NFNewAndHotViewController: UIViewController {
     private func initDelegate(){
         tableView.dataSource = viewModel
         tableView.delegate = viewModel
+        viewModel.delegate = self
     }
     private func initService(){
-        Service.shared.fetchNewsAndHotMovies { response in
+        NFService.shared.fetchData(request: ServicePath.NEW_AND_HOT.withBaseUrl(),
+                                 expecting: NFResponseNewAndHotMovie.self) { response in
             DispatchQueue.main.async {
                 self.viewModel.update(items: response.results)
                 self.tableView.reloadData()
@@ -46,6 +48,7 @@ class NFNewAndHotViewController: UIViewController {
             print(error.localizedDescription)
         }
 
+    
     }
 
 }
@@ -94,5 +97,16 @@ extension NFNewAndHotViewController{
 
         navigationController?.navigationBar.tintColor = UIColor.white
     }
+    
+}
+
+extension NFNewAndHotViewController :  NFNewAndHotViewModelDelegate{
+    func didSelectMovie(movie: NFMovieModel) {
+        
+        let nfMovieDetailScreenViewController = NFMovieDetailScreenViewController(movie: movie)
+        navigationController?.pushViewController(nfMovieDetailScreenViewController, animated: true)
+        
+    }
+    
     
 }

@@ -19,7 +19,7 @@ final class NFHomeViewHeaderView : UIView{
     private var playButton : UIButton = CustomButton(title: "Play", 
                                                      titleColor: .darkGray,
                                                      backColor: .white,
-                                                     iconName: "play")
+                                                     iconName: "play.fill")
     private let myListButton : UIButton = CustomButton(title: "MyList",
                                                        titleColor: .white,
                                                        backColor: .gray,
