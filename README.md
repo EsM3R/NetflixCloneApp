@@ -1,4 +1,3 @@
 
-
-Uploading Ekran Kaydı 2024-04-05 12.51.12 (online-video-cutter.com).mp4…
+https://github.com/EsM3R/NetflixCloneApp/assets/105605335/e124b7ba-94f9-4c75-8b94-96c2729e9a48
 
